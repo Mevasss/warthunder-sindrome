@@ -24,7 +24,7 @@ public:
 
 			c_game = new CGame;
 			if (!c_game->get_instance())
-				throw "Failed to get CHud instance";
+				throw "Failed to get CGame instance";
 
 			local_player = new CPlayer(CPlayer::get_local());
 			if (!local_player->is_valid())
@@ -98,6 +98,7 @@ public:
 		delete c_game;
 		delete local_player;
 		delete local_unit;
+		delete local_unit_info;
 	}
 	CHud* c_hud;
 	CGame* c_game;
