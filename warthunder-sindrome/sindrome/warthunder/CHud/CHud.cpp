@@ -24,5 +24,5 @@ auto CHud::aircraft_selection(const bool enabled) -> void
 
 auto CHud::ground_to_air_prediction(const bool enabled) -> void
 {
-	memory->write<bool>(this->base_address + offsets::chud::ground_to_air_prediction, enabled);
+	memory->write<bool>(this->base_address + offsets::chud::ground_to_air_prediction, !enabled); // false to true???
 }
