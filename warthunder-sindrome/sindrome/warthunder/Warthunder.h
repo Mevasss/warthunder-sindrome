@@ -7,6 +7,7 @@
 #include "CPlayer/CPlayer.h"
 #include "CUnit/CUnit.h"
 #include "CUnitInfo/CUnitInfo.h"
+#include "CTankInfo/CTankInfo.h"
 #include <iostream>
 #include <vector>
 #include <mutex>
@@ -75,7 +76,7 @@ public:
 					unit_list_mutex.unlock();
 					temp_units.clear();
 
-					std::this_thread::sleep_for(std::chrono::milliseconds(250));
+					std::this_thread::sleep_for(std::chrono::milliseconds(350));
 				}
 
 			});

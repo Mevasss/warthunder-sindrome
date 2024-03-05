@@ -1,5 +1,6 @@
 #pragma once
 #include <cstdint>
+#include <string>
 #include "../Structs/Structs.h"
 #include "../CUnit/CUnit.h"
 
@@ -26,6 +27,7 @@ public:
 	static auto get_local() -> const std::uintptr_t;
 	auto is_valid() -> const bool;
 	auto gui_state() -> const GuiState;
+	auto name() -> std::string;
 private:
 	std::uintptr_t base_address;
 };

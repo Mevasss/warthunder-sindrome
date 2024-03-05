@@ -11,3 +11,10 @@ auto CUnitInfo::is_valid() -> const bool
 {
 	return this->base_address != 0;
 }
+
+auto CUnitInfo::tank_info() -> CTankInfo
+{
+	return CTankInfo(memory->read<uintptr_t>(this->base_address + offsets::unit_info::tank_info));
+}
+
+

@@ -1,19 +1,17 @@
 #pragma once
 #include <cstdint>
 #include <string>
-#include "../CTankInfo/CTankInfo.h"
 
-class CUnitInfo
+class CTankInfo
 {
 public:
-	CUnitInfo(const std::uintptr_t base_address = 0) : base_address(base_address) {}
+	CTankInfo(const std::uintptr_t base_address = 0) : base_address(base_address) {}
 
 	const uintptr_t operator=(const std::uintptr_t base_address) {
 		return this->base_address = base_address;
 	}
-	auto bombsight_local(const bool enabled) -> void;
 	auto is_valid() -> const bool;
-	auto tank_info() -> CTankInfo;
+	auto tank_name() -> std::string;
 private:
 	std::uintptr_t base_address;
 };

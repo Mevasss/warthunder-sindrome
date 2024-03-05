@@ -44,6 +44,15 @@ public:
 	{
 		WriteProcessMemory(process_handle, reinterpret_cast<LPVOID>(address), reinterpret_cast<LPCVOID>(&buffer), sizeof(T), nullptr);
 	}
+
+	inline auto read_string(const std::uintptr_t address, const size_t string_size = 32) -> std::string
+	{
+		std::string buffer;
+		buffer.reserve(string_size);
+		ReadProcessMemory(process_handle, reinterpret_cast<LPCVOID>(address), reinterpret_cast<LPVOID>(buffer.data()), string_size, nullptr);
+		
+		return buffer.c_str();
+	}
 	
 	std::uintptr_t base_address{};
 

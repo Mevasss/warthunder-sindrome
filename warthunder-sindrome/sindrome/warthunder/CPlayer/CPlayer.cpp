@@ -1,6 +1,7 @@
 #include "CPlayer.h"
 #include "../../memory/Memory.h"
 #include "../offsets.h"
+#include <list>
 
 auto CPlayer::unit() -> CUnit
 {
@@ -20,6 +21,11 @@ auto CPlayer::is_valid() -> const bool
 auto CPlayer::gui_state() -> const GuiState
 {
 	return GuiState(memory->read<uint8_t>(this->base_address + offsets::player::GuiState));
+}
+
+auto CPlayer::name() -> std::string 
+{
+	return memory->read_string(this->base_address + offsets::player::name);
 }
 
 
