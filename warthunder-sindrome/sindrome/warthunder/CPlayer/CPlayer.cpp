@@ -23,7 +23,7 @@ auto CPlayer::gui_state() -> const GuiState
 	return GuiState(memory->read<uint8_t>(this->base_address + offsets::player::GuiState));
 }
 
-auto CPlayer::name() -> std::string 
+auto CPlayer::name() -> std::string
 {
 	return memory->read_string(this->base_address + offsets::player::name);
 }

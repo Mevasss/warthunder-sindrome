@@ -57,10 +57,9 @@ public:
 
 						const auto unit_count = c_game->get_unit_count3();
 						auto unit_list = c_game->get_unit_list3();
-						
 						if (unit_list.is_valid()) {
 
-							for (std::uint32_t i = 0; i < unit_count; ++i) {
+							for (uint32_t i = 0; i < unit_count; ++i) {
 								CUnit unit = unit_list.unit(i);
 
 								if (!unit.is_alive())

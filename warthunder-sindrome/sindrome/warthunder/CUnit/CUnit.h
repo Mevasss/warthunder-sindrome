@@ -35,6 +35,7 @@ public:
 	auto player() -> CPlayer;
 	auto unit_state() -> const std::uint16_t;
 	auto is_alive() -> const bool;
+	auto is_bot() -> const bool;
 
 private:
 	std::uintptr_t base_address;

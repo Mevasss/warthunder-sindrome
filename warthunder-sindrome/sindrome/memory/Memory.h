@@ -50,9 +50,10 @@ public:
 		static std::string buffer{};
 		buffer.clear();
 		buffer.reserve(string_size);
+
 		ReadProcessMemory(process_handle, reinterpret_cast<LPCVOID>(address), reinterpret_cast<LPVOID>(buffer.data()), string_size, nullptr);
 		
-		return buffer.c_str();
+		return std::string(buffer.c_str());
 	}
 	
 	std::uintptr_t base_address{};

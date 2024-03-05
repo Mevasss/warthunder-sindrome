@@ -61,6 +61,10 @@ auto CUnit::unit_state() -> const std::uint16_t
 
 auto CUnit::is_alive() -> const bool
 {
-	auto unit_state_ = unit_state();
-	return is_valid() && unit_state_ != 2 && unit_state_ != 4 && player().gui_state() == GuiState::ALIVE && memory->read<float>(this->base_address + offsets::unit::position) != 0.f;
+	return is_valid() && unit_state() != 2 && player().gui_state() == GuiState::ALIVE;
+}
+
+auto CUnit::is_bot() -> const bool
+{
+	return !this->player().is_valid();
 }
