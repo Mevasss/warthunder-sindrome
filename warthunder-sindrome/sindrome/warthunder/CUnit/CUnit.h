@@ -14,6 +14,14 @@ public:
 		 return this->base_address = base_address;
 	}
 
+	bool operator==(CUnit unit) {
+		return this->base_address == unit.base_address;
+	}
+	bool operator==(CUnit* unit) {
+		return this->base_address == unit->base_address;
+	}
+
+
 	auto position() -> const Vector3;
 	auto is_valid() -> const bool;
 	auto unit_info() -> CUnitInfo;

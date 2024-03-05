@@ -14,6 +14,13 @@ public:
 		return this->base_address = base_address;
 	}
 
+	bool operator==(CPlayer player) {
+		return this->base_address == player.base_address;
+	}
+	bool operator==(CPlayer* player) {
+		return this->base_address == player->base_address;
+	}
+
 	auto unit() -> CUnit;
 	static auto get_local() -> const std::uintptr_t;
 	auto is_valid() -> const bool;
