@@ -64,7 +64,7 @@ public:
 
 								if (!unit.is_alive())
 									continue;
-
+								
 								temp_units.push_back(unit);
 							}
 						}

@@ -18,15 +18,17 @@ int main()
         wt->c_hud->aircraft_selection(true);
         wt->c_hud->can_select_unit(true);
         wt->c_hud->ground_to_air_prediction(true);
+        wt->c_hud->vehicle_names(true);
 
         wt->unit_list_mutex.lock();
         for (auto unit : wt->unit_list) {
             if (!unit.is_bot())
-                file << unit.player().name() << " " << unit.unit_info().tank_info().tank_name() << "  " << wt->unit_list.size() << std::endl;
+                std::string str(unit.player().name() + " " + unit.unit_info().tank_info().tank_name());
+                //file << unit.player().name() << " " << unit.unit_info().tank_info().tank_name() << "  " << wt->unit_list.size() << std::endl;
         }
         wt->unit_list_mutex.unlock();
 
-        std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        std::this_thread::sleep_for(std::chrono::milliseconds(5));
     }
 
 
