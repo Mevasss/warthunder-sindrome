@@ -10,14 +10,15 @@ public:
 
 	CPlayer(const std::uintptr_t base_address = 0) : base_address(base_address) {}
 
-	uintptr_t operator=(const std::uintptr_t base_address) {
+	const uintptr_t operator=(const std::uintptr_t base_address) {
 		return this->base_address = base_address;
 	}
 
-	bool operator==(CPlayer player) {
+	const bool operator==(CPlayer player) {
 		return this->base_address == player.base_address;
 	}
-	bool operator==(CPlayer* player) {
+
+	const bool operator==(CPlayer* player) {
 		return this->base_address == player->base_address;
 	}
 
