@@ -9,5 +9,5 @@ auto CTankInfo::is_valid() -> const bool
 
 auto CTankInfo::tank_name() -> std::string
 {
-	return memory->read_string(this->base_address + offsets::tank_info2::tank_name,24);
+	return memory->read_string(this->base_address + offsets::tank_info2::tank_name);
 }
