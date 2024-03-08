@@ -13,10 +13,10 @@ namespace offsets
 	namespace chud
 	{
 		constexpr uintptr_t can_select_unit = 0x20; // bool
-		constexpr uintptr_t arcade_crosshair = 0x298; //bool
+		constexpr uintptr_t arcade_crosshair = 0x298 ; //bool
 		constexpr uintptr_t aircraft_distance = 0x29A; //bool
 		constexpr uintptr_t ground_to_air_prediction = 0x2A0; //bool TO FALSE ???
-		constexpr uintptr_t tank_esp = 0x1CC; //bool TO FALSE ??? // int_8_t to 2 or bitfield 7 bit to 1 other - 0
+		constexpr uintptr_t tank_esp = 0x1CC;  // int_8_t to 2 or bitfield 7 bit to 1 other - 0
 	}
 	namespace cgame
 	{

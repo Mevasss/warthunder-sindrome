@@ -22,9 +22,7 @@ int main()
 
         wt->unit_list_mutex.lock();
         for (auto unit : wt->unit_list) {
-            if (!unit.is_bot())
-                std::string str(unit.player().name() + " " + unit.unit_info().tank_info().tank_name());
-                //file << unit.player().name() << " " << unit.unit_info().tank_info().tank_name() << "  " << wt->unit_list.size() << std::endl;
+                file << unit.player().name() << " " << unit.unit_info().tank_info().tank_name() << "  " << wt->unit_list.size() << std::endl;
         }
         wt->unit_list_mutex.unlock();
 

@@ -42,7 +42,7 @@
     <ClCompile Include="sindrome\warthunder\CUnitList\CUnitList.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="sindrome\warthunder\CTankInfo\CTankInfo.cpp">
+    <ClCompile Include="sindrome\warthunder\CVehicleInfo\CVehicleInfo.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -77,7 +77,7 @@
     <ClInclude Include="sindrome\warthunder\CUnitList\CUnitList.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="sindrome\warthunder\CTankInfo\CTankInfo.h">
+    <ClInclude Include="sindrome\warthunder\CVehicleInfo\CVehicleInfo.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

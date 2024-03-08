@@ -7,7 +7,7 @@
 #include "CPlayer/CPlayer.h"
 #include "CUnit/CUnit.h"
 #include "CUnitInfo/CUnitInfo.h"
-#include "CTankInfo/CTankInfo.h"
+#include "CVehicleInfo/CVehicleInfo.h"
 #include <iostream>
 #include <vector>
 #include <mutex>

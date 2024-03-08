@@ -1,7 +1,7 @@
 #pragma once
 #include <cstdint>
 #include <string>
-#include "../CTankInfo/CTankInfo.h"
+#include "../CVehicleInfo/CVehicleInfo.h"
 
 class CUnitInfo
 {
@@ -13,7 +13,7 @@ public:
 	}
 	auto bombsight_local(const bool enabled) -> void;
 	auto is_valid() -> const bool;
-	auto tank_info() -> CTankInfo;
+	auto tank_info() -> CVehicleInfo;
 private:
 	std::uintptr_t base_address;
 };
