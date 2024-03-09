@@ -11,7 +11,7 @@ public:
 		return this->base_address = base_address;
 	}
 	auto is_valid() -> const bool;
-	auto tank_name() -> std::string;
+	auto vehice_name() -> std::string;
 private:
 	std::uintptr_t base_address;
 };

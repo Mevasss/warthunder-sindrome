@@ -48,6 +48,7 @@ namespace offsets
 		constexpr uintptr_t tank_info = 0x20;
 		constexpr uintptr_t tank_info2 = 0x28;
 		constexpr uintptr_t bombsight = 0x3F1;
+		constexpr uintptr_t unit_type = 0x38;
 	}
 	namespace tank_info2
 	{

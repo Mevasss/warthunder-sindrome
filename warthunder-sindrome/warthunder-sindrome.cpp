@@ -19,10 +19,10 @@ int main()
         wt->c_hud->can_select_unit(true);
         wt->c_hud->ground_to_air_prediction(true);
         wt->c_hud->vehicle_names(true);
-
+        
         wt->unit_list_mutex.lock();
         for (auto unit : wt->unit_list) {
-                file << unit.player().name() << " " << unit.unit_info().tank_info().tank_name() << "  " << wt->unit_list.size() << std::endl;
+            std::cout << unit.unit_info().is_plane();
         }
         wt->unit_list_mutex.unlock();
 

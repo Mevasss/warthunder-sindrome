@@ -44,8 +44,8 @@ public:
 
 			std::thread loopne([&]() { // kill me please cringe coding
 
-				while (1)
-				{
+				while (1) {
+
 					c_hud->get_instance();
 					c_game->get_instance();
 					*local_player = CPlayer::get_local();
@@ -77,7 +77,6 @@ public:
 
 					std::this_thread::sleep_for(std::chrono::milliseconds(350));
 				}
-
 			});
 
 			loopne.detach();

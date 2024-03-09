@@ -48,11 +48,11 @@ public:
 	inline auto read_string(const std::uintptr_t address, const size_t string_size = 32) -> std::string // help me :((((
 	{
 		static std::string buffer{};
-		buffer.clear();
 		buffer.reserve(string_size);
-
-		ReadProcessMemory(process_handle, reinterpret_cast<LPCVOID>(address), reinterpret_cast<LPVOID>(buffer.data()), string_size, nullptr);
+		buffer.clear();
 		
+		ReadProcessMemory(process_handle, reinterpret_cast<LPCVOID>(address), reinterpret_cast<LPVOID>(buffer.data()), string_size, nullptr);
+
 		return std::string(buffer.c_str());
 	}
 	
