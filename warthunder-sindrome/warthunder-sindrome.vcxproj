@@ -138,6 +138,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="sindrome\warthunder\CCamera\CCamera.cpp" />
     <ClCompile Include="sindrome\warthunder\CVehicleInfo\CVehicleInfo.cpp" />
     <ClCompile Include="sindrome\warthunder\CUnitList\CUnitList.cpp" />
     <ClCompile Include="sindrome\warthunder\CUnitInfo\CUnitInfo.cpp" />
@@ -150,6 +151,7 @@
     <ClCompile Include="sindrome\warthunder\Warthunder.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="sindrome\warthunder\CCamera\CCamera.h" />
     <ClInclude Include="sindrome\warthunder\CVehicleInfo\CVehicleInfo.h" />
     <ClInclude Include="sindrome\warthunder\CUnitList\CUnitList.h" />
     <ClInclude Include="sindrome\warthunder\CUnitInfo\CUnitInfo.h" />

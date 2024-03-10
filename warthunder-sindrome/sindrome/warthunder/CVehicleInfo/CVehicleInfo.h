@@ -7,7 +7,7 @@ class CVehicleInfo
 public:
 	CVehicleInfo(const std::uintptr_t base_address = 0) : base_address(base_address) {}
 
-	const uintptr_t operator=(const std::uintptr_t base_address) {
+	const std::uintptr_t operator=(const std::uintptr_t base_address) {
 		return this->base_address = base_address;
 	}
 	auto is_valid() -> const bool;
