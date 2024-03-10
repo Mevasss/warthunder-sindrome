@@ -55,7 +55,7 @@ namespace offsets
 	namespace ccamera
 	{
 		constexpr uintptr_t camera_position = 0x68;
-		constexpr uintptr_t camera_viewmatrix = 0x4C6C500;
+		constexpr uintptr_t camera_viewmatrix = 0x1E8;
 	}
 	namespace tank_info2
 	{
