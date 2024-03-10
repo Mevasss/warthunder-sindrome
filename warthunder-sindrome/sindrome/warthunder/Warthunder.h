@@ -99,6 +99,9 @@ public:
 		delete local_unit;
 		delete local_unit_info;
 	}
+
+	const ViewMatrix view_matrix();
+
 	CHud* c_hud;
 	CGame* c_game;
 
@@ -111,5 +114,5 @@ public:
 
 private:
 	std::vector<CUnit> temp_units;
-};
+}; inline Warthunder* warthunder;
 

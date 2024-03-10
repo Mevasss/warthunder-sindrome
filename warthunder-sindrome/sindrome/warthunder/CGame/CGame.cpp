@@ -32,6 +32,11 @@ auto CGame::get_unit_count3() -> const std::uint32_t
 	return memory->read<std::uint32_t>(this->base_address + offsets::cgame::unitcount3);
 }
 
+auto CGame::local_camera() -> CCamera
+{
+	return CCamera(memory->read<std::uintptr_t>(this->base_address + offsets::cgame::camera));
+}
+
 
 
 

@@ -16,7 +16,7 @@ namespace offsets
 		constexpr uintptr_t arcade_crosshair = 0x298 ; //bool
 		constexpr uintptr_t aircraft_distance = 0x29A; //bool
 		constexpr uintptr_t ground_to_air_prediction = 0x2A0; //bool TO FALSE ???
-		constexpr uintptr_t tank_esp = 0x1CC;  // int_8_t to 2 or bitfield 7 bit to 1 other - 0
+		constexpr uintptr_t tank_esp = 0x1CC;  // int_8_t to 2 or bitfield 7th bit to 1 other - 0
 	}
 	namespace cgame
 	{
@@ -30,6 +30,8 @@ namespace offsets
 		constexpr uintptr_t unitcount3 = 0x368;
 
 		constexpr uintptr_t prediction_sys_ptr = 0x448;
+
+		constexpr uintptr_t camera = 0x638;
 
 	}
 	namespace prediction_sys
@@ -49,6 +51,11 @@ namespace offsets
 		constexpr uintptr_t tank_info2 = 0x28;
 		constexpr uintptr_t bombsight = 0x3F1;
 		constexpr uintptr_t unit_type = 0x38;
+	}
+	namespace ccamera
+	{
+		constexpr uintptr_t camera_position = 0x68;
+		constexpr uintptr_t camera_viewmatrix = 0x4C6C500;
 	}
 	namespace tank_info2
 	{

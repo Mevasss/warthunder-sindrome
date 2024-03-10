@@ -45,7 +45,7 @@ public:
 		WriteProcessMemory(process_handle, reinterpret_cast<LPVOID>(address), reinterpret_cast<LPCVOID>(&buffer), sizeof(T), nullptr);
 	}
 
-	inline auto read_string(const std::uintptr_t address, const size_t string_size = 32) -> std::string // help me :((((
+	inline auto read_string(const std::uintptr_t address, const std::size_t string_size = 32) -> std::string // help me :((((
 	{
 		static std::string buffer{};
 		buffer.reserve(string_size);
@@ -57,10 +57,10 @@ public:
 	}
 	
 	std::uintptr_t base_address{};
-
+	std::uint32_t process_id{};
 private:
 
-	auto get_module_base_address(std::uint32_t process_id, const std::string module_name) -> const std::uintptr_t
+	auto get_module_base_address(const std::uint32_t process_id, const std::string module_name) -> const std::uintptr_t
 	{
 		std::uintptr_t module_base_address{ 0 };
 		HANDLE snapshot_handle = CreateToolhelp32Snapshot(TH32CS_SNAPMODULE | TH32CS_SNAPMODULE32, process_id);
@@ -120,7 +120,7 @@ private:
 	}
 
 	
-	std::uint32_t process_id;
-	HANDLE process_handle;
+
+	HANDLE process_handle{};
 }; inline Memory* memory;
 
