@@ -9,6 +9,6 @@ auto CVehicleInfo::is_valid() -> const bool
 
 auto CVehicleInfo::vehice_name() -> std::string
 {
-	return memory->read_string(this->base_address + offsets::tank_info2::tank_name);
+	return memory->read_string(this->base_address + offsets::vehicle_info::vehicle_name);
 }
 

@@ -53,7 +53,7 @@ public:
 					*local_unit_info = local_unit->unit_info();
 
 					const auto local_state = local_player->gui_state();
-					if (local_state == GuiState::ALIVE || local_state == GuiState::SPEC || local_state == GuiState::MENU) {
+					if (/*local_state == GuiState::ALIVE || local_state == GuiState::SPEC || local_state == GuiState::MENU*/ 1 == 1) {
 
 						const auto unit_count = c_game->get_unit_count3();
 						auto unit_list = c_game->get_unit_list3();
