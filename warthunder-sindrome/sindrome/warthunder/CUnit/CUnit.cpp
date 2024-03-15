@@ -61,7 +61,7 @@ auto CUnit::unit_state() -> const std::uint16_t
 
 auto CUnit::is_alive() -> const bool
 {
-	return is_valid() && unit_state() != 2 && player().gui_state() == GuiState::ALIVE;
+	return is_valid() && unit_state() != 2 /*&& player().gui_state() == GuiState::ALIVE*/;
 }
 
 auto CUnit::is_bot() -> const bool
