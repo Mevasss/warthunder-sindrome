@@ -12,6 +12,7 @@ public:
 		return this->base_address = base_address;
 	}
 	auto bombsight_local(const bool enabled) -> void;
+	auto bombsight_local() -> const bool;
 	auto is_valid() -> const bool;
 	auto unit_type() -> std::string;
 	auto vehicle_info() -> CVehicleInfo;

@@ -38,6 +38,10 @@ public:
 			local_unit_info = new CUnitInfo(local_unit->unit_info());
 			if (!local_unit_info->is_valid())
 				throw "Failed to get local_unit_info instance";
+
+			prediction_engine = new CPredictionEngine(c_game->prediciton_engine());
+			if (!prediction_engine->is_valid())
+				throw "Failed to get prediction_engine instance";
 			
 			unit_list.reserve(sizeof(CUnit) * 100);
 			temp_units.reserve(sizeof(CUnit) * 100);
@@ -51,9 +55,10 @@ public:
 					*local_player = CPlayer::get_local();
 					*local_unit = local_player->unit();
 					*local_unit_info = local_unit->unit_info();
+					*prediction_engine = c_game->prediciton_engine();
 
 					const auto local_state = local_player->gui_state();
-					if (/*local_state == GuiState::ALIVE || local_state == GuiState::SPEC || local_state == GuiState::MENU*/ 1 == 1) {
+					if (local_state == GuiState::ALIVE || local_state == GuiState::SPEC || local_state == GuiState::MENU) {
 
 						const auto unit_count = c_game->get_unit_count3();
 						auto unit_list = c_game->get_unit_list3();
@@ -62,7 +67,7 @@ public:
 							for (uint32_t i = 0; i < unit_count; ++i) {
 								CUnit unit = unit_list.unit(i);
 
-								if (!unit.is_alive())
+								if (!unit.is_valid() || !unit.is_alive() )
 									continue;
 								
 								temp_units.push_back(unit);
@@ -98,6 +103,7 @@ public:
 		delete local_player;
 		delete local_unit;
 		delete local_unit_info;
+		delete prediction_engine;
 	}
 
 	const ViewMatrix view_matrix();
@@ -108,6 +114,8 @@ public:
 	CPlayer* local_player;
 	CUnit* local_unit;
 	CUnitInfo* local_unit_info;
+
+	CPredictionEngine* prediction_engine;
 	
 	std::mutex unit_list_mutex; // bebebe
 	std::vector<CUnit> unit_list;

@@ -3,6 +3,7 @@
 #include "../CUnit/CUnit.h"
 #include "../CUnitList/CUnitList.h"
 #include "../CCamera/CCamera.h"
+#include "../CPredictionEngine/CPredictionEngine.h"
 
 class CGame
 {
@@ -19,6 +20,7 @@ public:
 	auto get_unit_count3() -> const std::uint32_t;
 
 	auto local_camera() -> CCamera;
+	auto prediciton_engine() -> CPredictionEngine;
 	
 private:
 	std::uintptr_t base_address;

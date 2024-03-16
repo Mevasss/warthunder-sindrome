@@ -9,10 +9,10 @@ auto CCamera::is_valid() -> const bool
 
 auto CCamera::view_matrix() -> const ViewMatrix
 {
-	return memory->read<ViewMatrix>(this->base_address + offsets::ccamera::camera_viewmatrix);
+	return memory->read<ViewMatrix>(this->base_address + offsets::_CCamera::camera_viewmatrix);
 }
 
 auto CCamera::position() -> const Vector3
 {
-	return memory->read<Vector3>(this->base_address + offsets::ccamera::camera_position);
+	return memory->read<Vector3>(this->base_address + offsets::_CCamera::camera_position);
 }
