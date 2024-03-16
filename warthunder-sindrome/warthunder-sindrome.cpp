@@ -13,7 +13,6 @@ int main()
 
     memory = new Memory("aces.exe");
     Warthunder* wt = new Warthunder;
-    std::fstream file("One.txt");
 
     test_offsets(wt);
 
@@ -24,7 +23,7 @@ int main()
         
         wt->unit_list_mutex.lock();
         for (auto unit : wt->unit_list) {
-        
+            std::cout << unit.unit_info().vehicle_info().vehice_name() << std::endl;
         }
         wt->unit_list_mutex.unlock();
 
@@ -43,13 +42,13 @@ void test_offsets(Warthunder* wt)
     bool old_aircraft_selection = wt->c_hud->aircraft_selection(); wt->c_hud->aircraft_selection(!old_aircraft_selection);
     std::cout << std::format("Aircraft selection: {} -> {}", old_aircraft_selection, wt->c_hud->aircraft_selection()) << std::endl;
 
-    bool old_can_select_unit = wt->c_hud->can_select_unit(); wt->c_hud->can_select_unit(old_can_select_unit);
+    bool old_can_select_unit = wt->c_hud->can_select_unit(); wt->c_hud->can_select_unit(!old_can_select_unit);
     std::cout << std::format("Can select unit: {} -> {}", old_can_select_unit, wt->c_hud->can_select_unit()) << std::endl;
 
     bool old_ground_to_air_prediction = wt->c_hud->ground_to_air_prediction(); wt->c_hud->ground_to_air_prediction(!old_ground_to_air_prediction);
     std::cout << std::format("Ground to air prediction: {} -> {}", old_ground_to_air_prediction, wt->c_hud->ground_to_air_prediction()) << std::endl;
 
-    bool old_vehicle_name = wt->c_hud->vehicle_names(); wt->c_hud->vehicle_names(old_vehicle_name);
+    bool old_vehicle_name = wt->c_hud->vehicle_names(); wt->c_hud->vehicle_names(!old_vehicle_name);
     std::cout << std::format("Ground to air prediction: {} -> {}", old_vehicle_name, wt->c_hud->vehicle_names()) << std::endl;
 
     std::cout << std::endl << "-- CGame --" << std::endl;
