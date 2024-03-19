@@ -6,6 +6,7 @@
 
 void test_offsets(Warthunder* wt);
 
+
 int main()
 {
     SetConsoleCP(1251);
@@ -15,15 +16,13 @@ int main()
     Warthunder* wt = new Warthunder;
 
     test_offsets(wt);
-
+  
 
     while (1)
     {   
-
-        
         wt->unit_list_mutex.lock();
         for (auto unit : wt->unit_list) {
-            std::cout << unit.unit_info().vehicle_info().vehice_name() << std::endl;
+            //std::cout << unit.unit_info().vehicle_info().vehice_name() << std::endl;
         }
         wt->unit_list_mutex.unlock();
 

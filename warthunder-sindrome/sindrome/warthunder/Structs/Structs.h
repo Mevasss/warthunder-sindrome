@@ -1,6 +1,9 @@
 #pragma once
+#define _USE_MATH_DEFINES
 #include <cmath>
 #include <limits>
+#include <math.h>
+
 
 enum GuiState : std::uint8_t
 {
@@ -129,3 +132,15 @@ public:
 	float dot() const { return x * x + y * y; }
 	float Length() const { return sqrtf(dot()); }
 };
+
+struct RAngle
+{
+	float yaw, pitch;
+	RAngle(float yaw_, float pitch_) : yaw(yaw_), pitch(pitch_) {}
+	RAngle() : yaw(0), pitch(0) {}
+
+
+
+
+};
+

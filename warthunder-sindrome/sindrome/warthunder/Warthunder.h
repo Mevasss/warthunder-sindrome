@@ -106,7 +106,9 @@ public:
 		delete prediction_engine;
 	}
 
-	const ViewMatrix view_matrix();
+	auto view_matrix() -> const ViewMatrix;
+	auto rangle() -> const RAngle;
+	auto rangle(const RAngle angle) -> void;
 
 	CHud* c_hud;
 	CGame* c_game;
