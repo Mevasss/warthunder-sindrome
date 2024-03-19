@@ -361,3 +361,13 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/warthunder-loader/warthunder-loader.vcxproj
+/warthunder-loader/warthunder-loader.vcxproj.filters
+/warthunder-loader/warthunder-loader.vcxproj
+/warthunder-loader/warthunder-loader.vcxproj.filters
+/warthunder-loader/warthunder-loader.cpp
+/warthunder-loader/auth/auth.hpp
+/warthunder-loader/libs/json.hpp
+/warthunder-loader/libs
+/warthunder-loader/Mem/MemLib.cpp
+/warthunder-loader/Mem/MemLib.h
