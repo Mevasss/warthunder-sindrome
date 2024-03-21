@@ -371,3 +371,14 @@ FodyWeavers.xsd
 /warthunder-loader/libs
 /warthunder-loader/Mem/MemLib.cpp
 /warthunder-loader/Mem/MemLib.h
+/warthunder-loader/donut/donut.h
+/warthunder-loader/driver/direct.asm
+/warthunder-loader/driver/driver.cpp
+/warthunder-loader/driver/driver.h
+/warthunder-loader/mapper/intel_driver.hpp
+/warthunder-loader/mapper/intel_driver_resource.hpp
+/warthunder-loader/mapper/kdmapper.hpp
+/warthunder-loader/mapper/nt.hpp
+/warthunder-loader/mapper/portable_executable.hpp
+/warthunder-loader/mapper/service.hpp
+/warthunder-loader/mapper/utils.hpp
