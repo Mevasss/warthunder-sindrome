@@ -382,3 +382,11 @@ FodyWeavers.xsd
 /warthunder-loader/mapper/portable_executable.hpp
 /warthunder-loader/mapper/service.hpp
 /warthunder-loader/mapper/utils.hpp
+/sindrome-hack/sindrome-hack.vcxproj
+/sindrome-hack/sindrome-hack.vcxproj.filters
+/sindrome-hack/sindrome/memory/direct.asm
+/sindrome-hack/sindrome/memory/driver.cpp
+/sindrome-hack/sindrome/memory/driver.h
+/sindrome-hack/sindrome-hack.cpp
+/sindrome-hack
+/warthunder-loader
